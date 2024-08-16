@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).off("click", ".save"),
+        $(document).on("click", ".save", function (e) {
+          const value = $(".name").val();
+          alert(value);
+        });
+      function validateForm() {
+        let x = document.getElementById("name").value;
+        alert(x);
+        if (x == "") {
+          alert("Name must be filled out");
+          return false;
+        }
+      }
+
+      const person = {
+        name: "John",
+        age: 30,
+      };
+      person.city = "New York";
+      console.log(person, "person");
+
+      const fruits = ["apple", "banana", "cherry"];
+      fruits.push("date");
+      console.log(fruits);
+    </script>
+  </head>
+  <body>
+    <form onsubmit="return validateForm()">
+      <input type="text" id="name" />
+      <textarea></textarea>
+      <input type="submit" value="Submit" />
+      <!-- <button class="save">Click me</button> -->
+    </form>
+
+    <h2>This is a heading</h2>
+
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+
+    <button class="save">Click me</button>
+  </body>
+</html>
